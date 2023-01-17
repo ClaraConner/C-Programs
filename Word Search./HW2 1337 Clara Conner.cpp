@@ -1,5 +1,4 @@
 /*
-Homework 2 Word Search
 Author: Clara Conner
 Description: Reads a matrix from a txt file and searches for a list of words within the matrix.
     displays which words were found and where.
@@ -126,7 +125,6 @@ void createWordList() {
         getline(inputFile, line);
         firstCharacterOfLine = inputFile.peek();
         readsSpecialCharacter(firstCharacterOfLine);
-
     } while (readsSpecialCharacter(firstCharacterOfLine));
     getline(inputFile, line);
     //skips past the matrix lines
@@ -144,9 +142,7 @@ void createWordList() {
         }
         else
             getline(inputFile, line);
-
     }
-
 }
 
 //prints the matrix from the file
@@ -174,10 +170,7 @@ void printMatrix() {
         getline(inputFile, line);
 
     }
-
     cout << endl << endl; //formatting
-
-
 }
 
 //reads the inputted file
@@ -211,8 +204,7 @@ void readInputFile() {
      }
      matrixColNum = stoi(temp_string);
      //outputs the dimensions
-     cout << "Matrix size: " << matrixRowNum << " x " << matrixColNum << endl << endl;
-        
+     cout << "Matrix size: " << matrixRowNum << " x " << matrixColNum << endl << endl;  
 }
 
 //checks if the file can be opened
@@ -247,7 +239,6 @@ void readWordsNotFound() {
     cout << "\n\nThese are the words that were not found in the matrix: " << endl;
     for (int i = 0; i < numWordsNotFound; i++)
         cout << wordsNotFound[i] << endl;
-
 }
 
 //Lets the user search for extra words in the matrix
@@ -262,7 +253,6 @@ void addAdditionalWords() {
         patternSearch(word);
         addAdditionalWords();
     }
-
 }
 
 int main() {
